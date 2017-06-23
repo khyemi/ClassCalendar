@@ -1,3 +1,4 @@
+<!-- login page -->
 <?php 
 	session_start();
 ?>
@@ -42,7 +43,7 @@
 			}     	
 		}
 	}
-  
+  	// Check userID
 	function testUserExists($name){
 		global $db_servername, $db_name, $db_password, $db_username, $db_port, $nameErr;
 		// Create connection  
@@ -62,7 +63,7 @@
 		}
 		return true;
 	}
-
+	// Check password
 	function testUserPassword($name, $password){
 		global $db_servername, $db_name, $db_password, $db_username, $db_port, $passwordErr;
 		$conn = new mysqli($db_servername,$db_name,$db_password,$db_username,$db_port);
